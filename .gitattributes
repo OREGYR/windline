@@ -1,0 +1,15 @@
+# Normalise line endings. Everything here is source that is read by tools with
+# opinions: Go, gofmt, PowerShell and the Python generator. They all cope with
+# LF, and mixed endings only create noise in diffs, so LF is stored and checked
+# out as-is on every platform.
+* text=auto eol=lf
+
+# Windows-only binary oddities that must not be touched.
+*.exe binary
+*.syso binary
+*.ico binary
+*.png binary
+
+# Generated translations: a machine writes these, so they are not worth
+# diffing as prose.
+i18n.go linguist-generated

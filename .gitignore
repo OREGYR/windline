@@ -1,0 +1,22 @@
+# Build output
+/windline.exe
+/.windline-mkicon.exe
+/mkrsrc.exe
+*.exe
+
+# Generated resources. build.ps1 regenerates both from source: the icon is drawn
+# by the app (--mkicon) and the object is compiled by tools/mkrsrc. Committing
+# them would mean committing a binary that can drift from the drawing code.
+/windline_amd64.syso
+/assets/windline.ico
+
+# Test output
+/_selftest/
+/_livetest/
+
+# Editor and OS noise
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/
